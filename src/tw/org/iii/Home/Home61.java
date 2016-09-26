@@ -3,8 +3,18 @@ package tw.org.iii.Home;
 public class Home61 {
 
 	public static void main(String[] args) {
-		RacingCar1 MyCar = new RacingCar1();
-		MyCar.newShow();
+		Car61 MyCars[] = new Car61[2];
+		
+		MyCars[0] = new Car61();
+		MyCars[0].setCar(1234, 12.33);
+		
+		MyCars[1] = new RacingCar1();
+		MyCars[1].setCar(4567, 15.12);
+		
+		for(int i=0; i<MyCars.length; i++){
+			MyCars[i].show();
+		}
+	
 		
 	}
 
@@ -38,7 +48,7 @@ class RacingCar1 extends Car61{
 		num2 = c;
 		System.out.println("將賽車編號設為" + num2);
 	}
-	public void newShow(){
+	public void show(){
 		System.out.println("賽車的車號是:" + num1);
 		System.out.println("汽油量是:" + gas);
 		System.out.println("賽車編號是" + num2);
