@@ -11,8 +11,8 @@ public class HomeCar {
 
 class Car{
 	// Field
-	protected int num;
-	protected double gas;
+	private int num;
+	private double gas;
 	// Constructor	
 	public Car(){
 		num = 0;
