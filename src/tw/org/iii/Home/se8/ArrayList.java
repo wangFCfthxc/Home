@@ -3,30 +3,29 @@ package tw.org.iii.Home.se8;
 import java.util.Arrays;
 
 public class ArrayList {
-	private Object[] elems;
-	private int next;
+    private Object[] list;
+    private int next;
+   
+    public ArrayList(int capacity) {
+        list = new Object[capacity];
+    }
 
-	public ArrayList(int capacity) {
-		elems = new Object[capacity];
-	}
-	
-	public ArrayList(){
-		this (16);
-	}
-	
-	public void add(Object o){
-		if(next == elems.length){
-			elems = Arrays.copyOf(elems, elems.length * 2);
-		}
-		elems[next++] = o;
-	}
-	
-	public Object get(int index){
-		return elems[index];
-	}
-	
-	public int size(){
-		return next;
-	}
+    public ArrayList() {
+        this(16);
+    }
 
+    public synchronized void add(Object o) {
+        if(next == list.length) {
+            list = Arrays.copyOf(list, list.length * 2);
+        }
+        list[next++] = o;
+    }
+    
+    public Object get(int index) {
+        return list[index];
+    }
+    
+    public int size() {
+        return next;
+    }
 }
