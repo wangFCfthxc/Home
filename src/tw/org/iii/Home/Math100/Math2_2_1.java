@@ -2,10 +2,10 @@ package tw.org.iii.Home.Math100;
 
 import java.util.Scanner;
 
-public class Math2_2 {
+public class Math2_2_1 {
 
 	public static void main(String[] args) {
-		System.out.println("請輸入個人收入:");
+		System.out.println("請輸入個人月收入:");
 		Scanner input = new Scanner(System.in); // 取的輸入物件
 		double sr = input.nextDouble();
 		System.out.println("應交個人所得稅:" + getTax(sr)); // 呼叫計算所得稅方法getTax
